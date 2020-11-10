@@ -31,6 +31,7 @@ def elongation(region):
     box_area = (bbox[0]-bbox[2])*(bbox[1]-bbox[3])
     return elongation * (box_area/area)
 
+total_pencils = 0
 
 for i in range(1,13):
     image_name = "images/img (" + str(i) + ").jpg"
@@ -68,3 +69,6 @@ for i in range(1,13):
            pencils+=1
     
     print(pencils)
+    total_pencils += pencils
+    
+print("Total number = " + str(total_pencils))
